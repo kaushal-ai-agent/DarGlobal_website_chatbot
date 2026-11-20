@@ -1,0 +1,67 @@
+[2026-11-20 19:13:55.052] [ON_TOOL_ERROR] {"tool": "execute_safe_sql", "arguments": {"query": "SELECT fake_column FROM v_wasalt_listings"}, "error": "no such column: fake_column"}
+[2026-11-20 19:55:52.949] [BEFORE_AGENT] {"agent": "real_estate_orchestrator", "session_id": "unknown", "state_keys": ""}
+[2026-11-20 20:33:05.450] [BEFORE_AGENT] {"agent": "real_estate_orchestrator", "session_id": "unknown", "last_active_agent": "None"}
+[2026-11-20 20:33:05.957] [BEFORE_MODEL] {"agent": "real_estate_orchestrator", "model": "resilient-multi-model", "contents_count": 2, "last_user_message_snippet": "hi"}
+[2026-11-20 20:33:08.371] [ON_MODEL_ERROR] {"agent": "real_estate_orchestrator", "model": "resilient-multi-model", "error_type": "ClientError", "error_message": "404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/resilient-multi-model is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}"}
+[2026-11-20 20:46:57.341] [BEFORE_AGENT] {"agent": "real_estate_orchestrator", "session_id": "unknown", "last_active_agent": "None"}
+[2026-11-20 20:46:57.661] [BEFORE_MODEL] {"agent": "real_estate_orchestrator", "model": "gemini-2.5-flash", "contents_count": 2, "last_user_message_snippet": "hi"}
+[2026-11-20 20:46:59.295] [AFTER_MODEL] {"agent": "real_estate_orchestrator", "response_snippet": "Hello! I'm your AI real estate advisor for DarGlobal and Wasalt. How can I assist you today with your property inquiries, luxury real estate interests"}
+[2026-11-20 20:46:59.355] [AFTER_AGENT] {"agent": "real_estate_orchestrator", "session_id": "unknown", "last_active_agent": "real_estate_orchestrator"}
+[2026-11-20 20:49:55.422] [BEFORE_AGENT] {"agent": "real_estate_orchestrator", "session_id": "unknown", "last_active_agent": "real_estate_orchestrator"}
+[2026-11-20 20:49:55.453] [BEFORE_MODEL] {"agent": "real_estate_orchestrator", "model": "gemini-2.5-flash", "contents_count": 4, "last_user_message_snippet": "who is Founder & Chief Executive Officer of darglobal"}
+[2026-11-20 20:49:55.922] [ON_MODEL_ERROR] {"agent": "real_estate_orchestrator", "model": "gemini-2.5-flash", "error_type": "_ResourceExhaustedError", "error_message": "\nOn how to mitigate this issue, please refer to:\n\nhttps://google.github.io/adk-docs/agents/models/google-gemini/#error-code-429-resource_exhausted\n\n\n429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash, description: Generate content requests per day limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\\nPlease retry in 16h40m4.162367348s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://aistudio.google.com/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content requests per day limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '60004s'}]}}"}
+[2026-11-20 20:54:34.433] [BEFORE_AGENT] {"agent": "real_estate_orchestrator", "session_id": "unknown", "last_active_agent": "None"}
+[2026-11-20 20:54:34.792] [BEFORE_MODEL] {"agent": "real_estate_orchestrator", "model": "gemini-2.5-flash", "contents_count": 2, "last_user_message_snippet": "who is Founder & Chief Executive Officer of darglobal"}
+[2026-11-20 20:54:37.127] [AFTER_MODEL] {"agent": "real_estate_orchestrator", "response_snippet": ""}
+[2026-11-20 20:54:37.166] [BEFORE_TOOL] {"tool": "transfer_to_agent", "arguments": {"agent_name": "company_knowledge_agent"}}
+[2026-11-20 20:54:37.166] [AFTER_TOOL] {"tool": "transfer_to_agent", "count": null, "success": null, "found": null}
+[2026-11-20 20:54:37.243] [BEFORE_AGENT] {"agent": "company_knowledge_agent", "session_id": "unknown", "last_active_agent": "None"}
+[2026-11-20 20:54:37.274] [BEFORE_MODEL] {"agent": "company_knowledge_agent", "model": "gemini-2.5-flash", "contents_count": 4, "last_user_message_snippet": "For context: below is a transcript of what another agent did, quoted between <<<BEGIN_QUOTED_AGENT_CONTENT>>> and <<<END"}
+[2026-11-20 20:54:38.987] [AFTER_MODEL] {"agent": "company_knowledge_agent", "response_snippet": ""}
+[2026-11-20 20:54:39.031] [BEFORE_TOOL] {"tool": "search_knowledge_base", "arguments": {"query": "Founder & Chief Executive Officer of DarGlobal"}}
+[2026-11-20 20:54:57.196] [AFTER_TOOL] {"tool": "search_knowledge_base", "count": 4, "success": null, "found": null}
+[2026-11-20 20:54:57.557] [BEFORE_MODEL] {"agent": "company_knowledge_agent", "model": "gemini-2.5-flash", "contents_count": 6, "last_user_message_snippet": "The text between <<<BEGIN_SYSTEM_INSTRUCTION>>> and <<<END_SYSTEM_INSTRUCTION>>> below is your own system instruction fo"}
+[2026-11-20 20:54:58.994] [AFTER_MODEL] {"agent": "company_knowledge_agent", "response_snippet": "Ziad El Chaar is the Chief Executive Officer of DarGlobal. He leads the company's strategic expansion and partnerships.\n\nSource: https://darglobal.co."}
+[2026-11-20 20:54:59.069] [AFTER_AGENT] {"agent": "company_knowledge_agent", "session_id": "unknown", "last_active_agent": "company_knowledge_agent"}
+[2026-11-20 22:10:20.877] [BEFORE_AGENT] {"agent": "real_estate_orchestrator", "session_id": "unknown", "last_active_agent": "None"}
+[2026-11-20 22:10:21.286] [BEFORE_MODEL] {"agent": "real_estate_orchestrator", "model": "gemini-2.5-flash", "contents_count": 2, "last_user_message_snippet": "who is Founder & Chief Executive Officer of darglobal\n\n"}
+[2026-11-20 22:10:23.313] [AFTER_MODEL] {"agent": "real_estate_orchestrator", "response_snippet": ""}
+[2026-11-20 22:10:23.354] [BEFORE_TOOL] {"tool": "transfer_to_agent", "arguments": {"agent_name": "company_knowledge_agent"}}
+[2026-11-20 22:10:23.357] [AFTER_TOOL] {"tool": "transfer_to_agent", "count": null, "success": null, "found": null}
+[2026-11-20 22:10:23.393] [BEFORE_AGENT] {"agent": "company_knowledge_agent", "session_id": "unknown", "last_active_agent": "None"}
+[2026-11-20 22:10:23.407] [BEFORE_MODEL] {"agent": "company_knowledge_agent", "model": "gemini-2.5-flash", "contents_count": 4, "last_user_message_snippet": "For context: below is a transcript of what another agent did, quoted between <<<BEGIN_QUOTED_AGENT_CONTENT>>> and <<<END"}
+[2026-11-20 22:10:25.080] [AFTER_MODEL] {"agent": "company_knowledge_agent", "response_snippet": ""}
+[2026-11-20 22:10:25.113] [BEFORE_TOOL] {"tool": "search_knowledge_base", "arguments": {"query": "Founder & Chief Executive Officer of DarGlobal"}}
+[2026-11-20 22:10:26.355] [AFTER_TOOL] {"tool": "search_knowledge_base", "count": 4, "success": null, "found": null}
+[2026-11-20 22:10:26.392] [BEFORE_MODEL] {"agent": "company_knowledge_agent", "model": "gemini-2.5-flash", "contents_count": 6, "last_user_message_snippet": "The text between <<<BEGIN_SYSTEM_INSTRUCTION>>> and <<<END_SYSTEM_INSTRUCTION>>> below is your own system instruction fo"}
+[2026-11-20 22:10:27.633] [AFTER_MODEL] {"agent": "company_knowledge_agent", "response_snippet": "Ziad El Chaar is the Chief Executive Officer of DarGlobal. Under his leadership, DarGlobal was listed on the London Stock Exchange in 2023 and has est"}
+[2026-11-20 22:10:27.665] [AFTER_AGENT] {"agent": "company_knowledge_agent", "session_id": "unknown", "last_active_agent": "company_knowledge_agent"}
+[2026-11-20 22:39:51.973] [BEFORE_AGENT] {"agent": "company_knowledge_agent", "session_id": "unknown", "last_active_agent": "company_knowledge_agent"}
+[2026-11-20 22:39:51.981] [BEFORE_MODEL] {"agent": "company_knowledge_agent", "model": "gemini-2.5-flash", "contents_count": 8, "last_user_message_snippet": "first can you tell me the absolute minimum priced property in riyadh"}
+[2026-11-20 22:39:57.030] [AFTER_MODEL] {"agent": "company_knowledge_agent", "response_snippet": ""}
+[2026-11-20 22:39:57.067] [BEFORE_TOOL] {"tool": "transfer_to_agent", "arguments": {"agent_name": "property_database_agent"}}
+[2026-11-20 22:39:57.070] [AFTER_TOOL] {"tool": "transfer_to_agent", "count": null, "success": null, "found": null}
+[2026-11-20 22:39:57.117] [BEFORE_AGENT] {"agent": "property_database_agent", "session_id": "unknown", "last_active_agent": "company_knowledge_agent"}
+[2026-11-20 22:39:57.161] [BEFORE_MODEL] {"agent": "property_database_agent", "model": "gemini-2.5-flash", "contents_count": 10, "last_user_message_snippet": "For context: below is a transcript of what another agent did, quoted between <<<BEGIN_QUOTED_AGENT_CONTENT>>> and <<<END"}
+[2026-11-20 22:39:59.145] [AFTER_MODEL] {"agent": "property_database_agent", "response_snippet": ""}
+[2026-11-20 22:39:59.494] [BEFORE_TOOL] {"tool": "execute_safe_sql", "arguments": {"sql_query": "SELECT title, property_type, price_amount, built_up_area_sqm, bedrooms, bathrooms, broker_agency_name, rega_ad_license_no, listing_url FROM v_wasalt_listings WHERE city = \"Riyadh\" ORDER BY price_amount ASC LIMIT 1"}}
+[2026-11-20 22:39:59.648] [AFTER_TOOL] {"tool": "execute_safe_sql", "count": null, "success": true, "found": null}
+[2026-11-20 22:39:59.686] [BEFORE_MODEL] {"agent": "property_database_agent", "model": "gemini-2.5-flash", "contents_count": 12, "last_user_message_snippet": "The text between <<<BEGIN_SYSTEM_INSTRUCTION>>> and <<<END_SYSTEM_INSTRUCTION>>> below is your own system instruction fo"}
+[2026-11-20 22:40:02.263] [AFTER_MODEL] {"agent": "property_database_agent", "response_snippet": "The absolute minimum priced property I found in Riyadh is an apartment with 3 bedrooms and 3 bathrooms, spanning 82.75 SQM. It is listed for 320,000 S"}
+[2026-11-20 22:40:02.294] [AFTER_AGENT] {"agent": "property_database_agent", "session_id": "unknown", "last_active_agent": "property_database_agent"}
+[2026-11-20 22:44:42.314] [BEFORE_AGENT] {"agent": "property_database_agent", "session_id": "unknown", "last_active_agent": "property_database_agent"}
+[2026-11-20 22:44:42.340] [BEFORE_MODEL] {"agent": "property_database_agent", "model": "gemini-2.5-flash", "contents_count": 14, "last_user_message_snippet": "okay i am looking for a property in jeddag"}
+[2026-11-20 22:44:46.706] [AFTER_MODEL] {"agent": "property_database_agent", "response_snippet": ""}
+[2026-11-20 22:44:46.739] [BEFORE_TOOL] {"tool": "search_properties", "arguments": {"city": "Jeddah"}}
+[2026-11-20 22:44:46.750] [AFTER_TOOL] {"tool": "search_properties", "count": 0, "success": null, "found": null}
+[2026-11-20 22:44:46.793] [BEFORE_MODEL] {"agent": "property_database_agent", "model": "gemini-2.5-flash", "contents_count": 16, "last_user_message_snippet": "The text between <<<BEGIN_SYSTEM_INSTRUCTION>>> and <<<END_SYSTEM_INSTRUCTION>>> below is your own system instruction fo"}
+[2026-11-20 22:44:49.156] [AFTER_MODEL] {"agent": "property_database_agent", "response_snippet": "I couldn't find any Wasalt property sales listings in Jeddah in my current database. Our Wasalt listings primarily focus on Riyadh.\n\nHowever, DarGloba"}
+[2026-11-20 22:44:49.191] [AFTER_AGENT] {"agent": "property_database_agent", "session_id": "unknown", "last_active_agent": "property_database_agent"}
+[2026-11-20 22:45:11.812] [BEFORE_AGENT] {"agent": "property_database_agent", "session_id": "unknown", "last_active_agent": "property_database_agent"}
+[2026-11-20 22:45:11.840] [BEFORE_MODEL] {"agent": "property_database_agent", "model": "gemini-2.5-flash", "contents_count": 18, "last_user_message_snippet": "yes tell about Trump Tower Jeddah"}
+[2026-11-20 22:45:14.551] [AFTER_MODEL] {"agent": "property_database_agent", "response_snippet": ""}
+[2026-11-20 22:45:14.582] [BEFORE_TOOL] {"tool": "search_luxury_projects", "arguments": {"city": "Jeddah", "brand": "Trump"}}
+[2026-11-20 22:45:14.606] [AFTER_TOOL] {"tool": "search_luxury_projects", "count": 1, "success": null, "found": null}
+[2026-11-20 22:45:15.124] [BEFORE_MODEL] {"agent": "property_database_agent", "model": "gemini-2.5-flash", "contents_count": 20, "last_user_message_snippet": "The text between <<<BEGIN_SYSTEM_INSTRUCTION>>> and <<<END_SYSTEM_INSTRUCTION>>> below is your own system instruction fo"}
+[2026-11-20 22:45:19.228] [AFTER_MODEL] {"agent": "property_database_agent", "response_snippet": "Trump Tower Jeddah, a DarGlobal luxury development in partnership with The Trump Organization, is located on the picturesque Jeddah Corniche in Saudi "}
+[2026-11-20 22:45:19.268] [AFTER_AGENT] {"agent": "property_database_agent", "session_id": "unknown", "last_active_agent": "property_database_agent"}

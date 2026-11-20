@@ -1,0 +1,37 @@
+[
+  {
+    "name": "minimum_price_riyadh_test",
+    "data": [
+      {
+        "query": "What is the absolute minimum priced property in Riyadh on Wasalt?",
+        "expected_tool_use": [
+          {
+            "tool_name": "search_properties",
+            "tool_input": {
+              "city": "Riyadh",
+              "limit": 5
+            }
+          }
+        ],
+        "reference": "The lowest priced property in Riyadh on Wasalt is an Apartment in An-Nadheem with 3 Bedrooms (82.75 SQM) listed at 320,000 SAR (REGA License: 7201229404)."
+      }
+    ]
+  },
+  {
+    "name": "single_property_card_inspection_test",
+    "data": [
+      {
+        "query": "Tell me more about this Apartment 124.69 SQM with 3 Bedrooms",
+        "expected_tool_use": [
+          {
+            "tool_name": "get_property_details",
+            "tool_input": {
+              "listing_id_or_title": "Apartment 124.69 SQM with 3 Bedrooms"
+            }
+          }
+        ],
+        "reference": "This verified apartment is located in Ar-Rimal, Riyadh, featuring 3 bedrooms and 3 bathrooms covering 124.69 SQM, listed at 470,000 SAR under REGA advertising permit #7201224771."
+      }
+    ]
+  }
+]

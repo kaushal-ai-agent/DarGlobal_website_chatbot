@@ -1,0 +1,36 @@
+[
+  {
+    "name": "trump_tower_jeddah_narrative_test",
+    "data": [
+      {
+        "query": "What is Trump Tower Jeddah?",
+        "expected_tool_use": [
+          {
+            "tool_name": "search_knowledge_base",
+            "tool_input": {
+              "query": "Trump Tower Jeddah"
+            }
+          }
+        ],
+        "reference": "Trump Tower Jeddah is a 47-floor luxury seafront residential tower located on the Jeddah Corniche in Saudi Arabia, developed by DarGlobal."
+      }
+    ]
+  },
+  {
+    "name": "darglobal_tokenization_test",
+    "data": [
+      {
+        "query": "How does DarGlobal tokenization work?",
+        "expected_tool_use": [
+          {
+            "tool_name": "search_knowledge_base",
+            "tool_input": {
+              "query": "DarGlobal tokenization"
+            }
+          }
+        ],
+        "reference": "DarGlobal facilitates real estate tokenization allowing fractional digital ownership and smart contract security for international investors."
+      }
+    ]
+  }
+]

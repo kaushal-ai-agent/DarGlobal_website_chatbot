@@ -1,0 +1,21 @@
+**/.git
+**/.gitignore
+**/node_modules
+**/dist
+**/build
+**/__pycache__
+**/*.pyc
+**/.pytest_cache
+**/.venv
+**/.env
+**/.DS_Store
+backend/src/static/
+README.md
+skills.md
+darglobal_wasalt_chatbot_project_plan.md
+
+# Ignore large raw scraping caches and bronze dumps
+data/wasalt/
+data/samples/
+data/*.jsonl
+data/checkpoints/

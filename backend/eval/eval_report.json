@@ -1,0 +1,308 @@
+{
+  "timestamp": "2026-11-20T08:02:56Z",
+  "architecture": "Frontier AI Labs 2025-2026 Contextual Hybrid RAG + Google ADK Harness",
+  "technologies": {
+    "orchestration": "google-adk",
+    "routing": "litellm",
+    "embeddings": "fastembed (BAAI/bge-small-en-v1.5 ONNX)",
+    "reranker": "flashrank (ms-marco-MiniLM-L-12-v2 ONNX)",
+    "vector_store": "qdrant-client (embedded)",
+    "sparse_search": "sqlite3 FTS5 (BM25)"
+  },
+  "ablation_benchmark": {
+    "BM25-Only": {
+      "hit_at_5": 0.7,
+      "mrr_at_5": 0.6,
+      "avg_latency_ms": 45.15
+    },
+    "Dense-Only": {
+      "hit_at_5": 0.7,
+      "mrr_at_5": 0.55,
+      "avg_latency_ms": 166.07
+    },
+    "Contextual Hybrid + Rerank": {
+      "hit_at_5": 0.7,
+      "mrr_at_5": 0.6,
+      "avg_latency_ms": 5322.2
+    }
+  },
+  "golden_evaluation": {
+    "total_queries": 25,
+    "passed_queries": 25,
+    "pass_rate": 100.0,
+    "bucket_breakdown": {
+      "1. Deterministic SQL & Filtering": {
+        "total": 5,
+        "passed": 5
+      },
+      "2. Relational Joins & Auctions": {
+        "total": 5,
+        "passed": 5
+      },
+      "3. Semantic & FAQ Retrieval": {
+        "total": 5,
+        "passed": 5
+      },
+      "4. Hybrid Multi-Hop Bridge": {
+        "total": 5,
+        "passed": 5
+      },
+      "5. Out-of-Scope & Data-Boundary Honesty": {
+        "total": 5,
+        "passed": 5
+      }
+    },
+    "test_results": [
+      {
+        "id": "sql_01",
+        "bucket": "1. Deterministic SQL & Filtering",
+        "query": "Show 3-bedroom apartments in Riyadh under 600,000 SAR with active REGA licenses.",
+        "passed": true,
+        "latency_ms": 96.47,
+        "sources_count": 5,
+        "tool_calls_count": 1,
+        "reply_snippet": "Here are 5 verified listings on Wasalt:\n\n- **Apartment 82.75 SQM with 3 Bedrooms** in An-Nadheem, Riyadh: 320,000 SAR (3"
+      },
+      {
+        "id": "sql_02",
+        "bucket": "1. Deterministic SQL & Filtering",
+        "query": "List all apartments in Riyadh for sale with 2 bedrooms under 500,000 SAR.",
+        "passed": true,
+        "latency_ms": 3.52,
+        "sources_count": 5,
+        "tool_calls_count": 1,
+        "reply_snippet": "Here are 5 verified listings on Wasalt:\n\n- **Apartment 82.75 SQM with 3 Bedrooms** in An-Nadheem, Riyadh: 320,000 SAR (3"
+      },
+      {
+        "id": "sql_03",
+        "bucket": "1. Deterministic SQL & Filtering",
+        "query": "Find properties in As-Saadah district in Riyadh with active advertising permits.",
+        "passed": true,
+        "latency_ms": 3.3,
+        "sources_count": 2,
+        "tool_calls_count": 1,
+        "reply_snippet": "Here are 2 verified listings on Wasalt:\n\n- **Apartment 111.81 SQM with 3 Bedrooms** in As-Saadah, Riyadh: 660,000 SAR (3"
+      },
+      {
+        "id": "sql_04",
+        "bucket": "1. Deterministic SQL & Filtering",
+        "query": "Show Wasalt listings with building year 2024 and 3+ bedrooms.",
+        "passed": true,
+        "latency_ms": 4.23,
+        "sources_count": 5,
+        "tool_calls_count": 1,
+        "reply_snippet": "Here are 5 verified listings on Wasalt:\n\n- **Apartment 82.75 SQM with 3 Bedrooms** in An-Nadheem, Riyadh: 320,000 SAR (3"
+      },
+      {
+        "id": "sql_05",
+        "bucket": "1. Deterministic SQL & Filtering",
+        "query": "What are the cheapest apartments for sale in Riyadh on Wasalt?",
+        "passed": true,
+        "latency_ms": 3.77,
+        "sources_count": 5,
+        "tool_calls_count": 1,
+        "reply_snippet": "Here are 5 verified listings on Wasalt:\n\n- **Apartment 82.75 SQM with 3 Bedrooms** in An-Nadheem, Riyadh: 320,000 SAR (3"
+      },
+      {
+        "id": "auc_01",
+        "bucket": "2. Relational Joins & Auctions",
+        "query": "Which live auctions have a deposit under 5,000 SAR, and how many lots are in Group 1162?",
+        "passed": true,
+        "latency_ms": 12.59,
+        "sources_count": 3,
+        "tool_calls_count": 2,
+        "reply_snippet": "**Wasalt Auction Group 1162:**\n- Total Lots: **11 lots** (10 indexed lots)\n- Lifecycle Status: **LIVE**\n- Minimum Requir"
+      },
+      {
+        "id": "auc_02",
+        "bucket": "2. Relational Joins & Auctions",
+        "query": "How many asset lots are in Auction Group 1149 and what is its status?",
+        "passed": true,
+        "latency_ms": 3.75,
+        "sources_count": 1,
+        "tool_calls_count": 1,
+        "reply_snippet": "**Found 1 matching auction events on Wasalt:**\n\n- **Wasalt Auction Group 1149 (Real Estate)** in Riyadh: Status CANCELLE"
+      },
+      {
+        "id": "auc_03",
+        "bucket": "2. Relational Joins & Auctions",
+        "query": "List all live real estate auctions in Riyadh.",
+        "passed": true,
+        "latency_ms": 3.17,
+        "sources_count": 2,
+        "tool_calls_count": 1,
+        "reply_snippet": "**Found 2 matching auction events on Wasalt:**\n\n- **Wasalt Auction Group 1162 (Real Estate)** in Riyadh: Status LIVE, 11"
+      },
+      {
+        "id": "auc_04",
+        "bucket": "2. Relational Joins & Auctions",
+        "query": "What is the minimum deposit required for Wasalt Auction Group 1152?",
+        "passed": true,
+        "latency_ms": 3.48,
+        "sources_count": 1,
+        "tool_calls_count": 1,
+        "reply_snippet": "**Found 1 matching auction events on Wasalt:**\n\n- **Wasalt Auction Group 1152 (Real Estate)** in Riyadh: Status CANCELLE"
+      },
+      {
+        "id": "auc_05",
+        "bucket": "2. Relational Joins & Auctions",
+        "query": "Who is the sales agent for Auction Group 1162 in Riyadh?",
+        "passed": true,
+        "latency_ms": 3.74,
+        "sources_count": 1,
+        "tool_calls_count": 1,
+        "reply_snippet": "**Found 1 matching auction events on Wasalt:**\n\n- **Wasalt Auction Group 1162 (Real Estate)** in Riyadh: Status LIVE, 11"
+      },
+      {
+        "id": "sem_01",
+        "bucket": "3. Semantic & FAQ Retrieval",
+        "query": "How does DarGlobal tokenization and digital ownership work?",
+        "passed": true,
+        "latency_ms": 5053.15,
+        "sources_count": 1,
+        "tool_calls_count": 1,
+        "reply_snippet": "### DarGlobal Tokenization & Digital Ownership Guide\n\n\n# DarGlobal Tokenization & Digital Ownership Guide\n\n**Source URL:"
+      },
+      {
+        "id": "sem_02",
+        "bucket": "3. Semantic & FAQ Retrieval",
+        "query": "Explain Wasalt's Infath auction eWallet deposit and 14-day settlement process.",
+        "passed": true,
+        "latency_ms": 14.96,
+        "sources_count": 6,
+        "tool_calls_count": 1,
+        "reply_snippet": "**Wasalt Infath & Private Auction Bidding & Settlement Rules:**\n- **Deposit:** Bidders allocate an e-Wallet deposit (e.g"
+      },
+      {
+        "id": "sem_03",
+        "bucket": "3. Semantic & FAQ Retrieval",
+        "query": "Does Trump International Hotel and Tower Dubai have the world's highest pool?",
+        "passed": true,
+        "latency_ms": 5726.29,
+        "sources_count": 1,
+        "tool_calls_count": 1,
+        "reply_snippet": "### TRUMP INTERNATIONAL HOTEL & TOWER DUBAI - Luxury Residence Project Narrative\n\n\n**Q:**Q: Does Trump International Hot"
+      },
+      {
+        "id": "sem_04",
+        "bucket": "3. Semantic & FAQ Retrieval",
+        "query": "What design inspiration did Pagani provide for Da Vinci Tower in Dubai?",
+        "passed": true,
+        "latency_ms": 4704.93,
+        "sources_count": 1,
+        "tool_calls_count": 1,
+        "reply_snippet": "### Which company builds villas with Pagani interiors in Dubai?\n\n\n# Which company builds villas with Pagani interiors in"
+      },
+      {
+        "id": "sem_05",
+        "bucket": "3. Semantic & FAQ Retrieval",
+        "query": "What are the buying steps for international investors on DarGlobal?",
+        "passed": true,
+        "latency_ms": 5629.21,
+        "sources_count": 1,
+        "tool_calls_count": 1,
+        "reply_snippet": "### DarGlobal Global Buying Process & Consumer FAQs\n\n\nDarGlobal offers a streamlined, transparent international property"
+      },
+      {
+        "id": "hop_01",
+        "bucket": "4. Hybrid Multi-Hop Bridge",
+        "query": "Compare residency investment minimums in UAE, Oman, and Saudi Arabia, and list one DarGlobal project in each.",
+        "passed": true,
+        "latency_ms": 37.8,
+        "sources_count": 13,
+        "tool_calls_count": 8,
+        "reply_snippet": "### Country Residency & Golden Visa Comparison\n\n- **UAE** (UAE 10-Year Golden Visa (Property Investor)): Minimum qualify"
+      },
+      {
+        "id": "hop_02",
+        "bucket": "4. Hybrid Multi-Hop Bridge",
+        "query": "What is the minimum investment for the Saudi Real Estate Owner Premium Residency track?",
+        "passed": true,
+        "latency_ms": 17.04,
+        "sources_count": 6,
+        "tool_calls_count": 4,
+        "reply_snippet": "### Country Residency & Golden Visa Comparison\n\n- **Saudi Arabia** (Premium Residency (Real Estate Owner Track)): Minimu"
+      },
+      {
+        "id": "hop_03",
+        "bucket": "4. Hybrid Multi-Hop Bridge",
+        "query": "Which DarGlobal projects in Oman offer eligibility for the Investor Residency Program?",
+        "passed": true,
+        "latency_ms": 10.14,
+        "sources_count": 2,
+        "tool_calls_count": 2,
+        "reply_snippet": "### Country Residency & Golden Visa Comparison\n\n- **Oman** (Investor Residency Programme (First-Class / Second-Class)): "
+      },
+      {
+        "id": "hop_04",
+        "bucket": "4. Hybrid Multi-Hop Bridge",
+        "query": "What are the tax benefits of buying property in Qatar under the permanent residency framework?",
+        "passed": true,
+        "latency_ms": 6.02,
+        "sources_count": 1,
+        "tool_calls_count": 1,
+        "reply_snippet": "Under the Qatar Real Estate Permanent Residency framework, foreign property investors enjoy exceptional statutory tax pr"
+      },
+      {
+        "id": "hop_05",
+        "bucket": "4. Hybrid Multi-Hop Bridge",
+        "query": "Compare foreign freehold property ownership rules between Saudi Arabia, UAE, and Spain.",
+        "passed": true,
+        "latency_ms": 48.53,
+        "sources_count": 13,
+        "tool_calls_count": 8,
+        "reply_snippet": "### Country Residency & Golden Visa Comparison\n\n- **UAE** (UAE 10-Year Golden Visa (Property Investor)): Minimum qualify"
+      },
+      {
+        "id": "bound_01",
+        "bucket": "5. Out-of-Scope & Data-Boundary Honesty",
+        "query": "Find 2BR apartments for rent in Jeddah on Wasalt",
+        "passed": true,
+        "latency_ms": 0.17,
+        "sources_count": 0,
+        "tool_calls_count": 1,
+        "reply_snippet": "We currently do not have rental listings in Jeddah in our indexed database snapshot. Our current Wasalt listings focus o"
+      },
+      {
+        "id": "bound_02",
+        "bucket": "5. Out-of-Scope & Data-Boundary Honesty",
+        "query": "Show luxury villas for sale in Paris France on DarGlobal",
+        "passed": true,
+        "latency_ms": 6796.24,
+        "sources_count": 1,
+        "tool_calls_count": 1,
+        "reply_snippet": "### Dar Global Opens Sales for Trump Villas Simaisma, Qatar with Unprecedented Interest\n\n\n# Dar Global Opens Sales for T"
+      },
+      {
+        "id": "bound_03",
+        "bucket": "5. Out-of-Scope & Data-Boundary Honesty",
+        "query": "Write me a Python bubble sort algorithm with test cases",
+        "passed": true,
+        "latency_ms": 33.35,
+        "sources_count": 0,
+        "tool_calls_count": 0,
+        "reply_snippet": "I am specifically designed to assist with DarGlobal luxury real estate, Wasalt Saudi property listings, Infath auctions,"
+      },
+      {
+        "id": "bound_04",
+        "bucket": "5. Out-of-Scope & Data-Boundary Honesty",
+        "query": "Can you give me a recipe for traditional Italian pasta carbonara?",
+        "passed": true,
+        "latency_ms": 0.12,
+        "sources_count": 0,
+        "tool_calls_count": 0,
+        "reply_snippet": "I am specifically designed to assist with DarGlobal luxury real estate, Wasalt Saudi property listings, Infath auctions,"
+      },
+      {
+        "id": "bound_05",
+        "bucket": "5. Out-of-Scope & Data-Boundary Honesty",
+        "query": "Find commercial offices for rent in Dammam on Wasalt",
+        "passed": true,
+        "latency_ms": 13.94,
+        "sources_count": 0,
+        "tool_calls_count": 0,
+        "reply_snippet": "We currently do not index commercial office or rental listings in Dammam in our database snapshot. Our current Wasalt li"
+      }
+    ]
+  }
+}

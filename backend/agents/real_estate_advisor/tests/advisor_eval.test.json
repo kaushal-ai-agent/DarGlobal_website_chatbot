@@ -1,0 +1,36 @@
+[
+  {
+    "name": "jeddah_cross_referencing_test",
+    "data": [
+      {
+        "query": "Give me properties in Jeddah",
+        "expected_tool_use": [
+          {
+            "tool_name": "transfer_to_agent",
+            "tool_input": {
+              "agent_name": "property_database_agent"
+            }
+          }
+        ],
+        "reference": "Currently, Wasalt property listings focus on Riyadh. However, DarGlobal features Trump Tower Jeddah on the Jeddah Corniche."
+      }
+    ]
+  },
+  {
+    "name": "trump_tower_jeddah_info_test",
+    "data": [
+      {
+        "query": "Tell me about Trump Tower Jeddah",
+        "expected_tool_use": [
+          {
+            "tool_name": "transfer_to_agent",
+            "tool_input": {
+              "agent_name": "company_knowledge_agent"
+            }
+          }
+        ],
+        "reference": "Trump Tower Jeddah is a 47-floor luxury seafront residential tower on the Jeddah Corniche, developed by DarGlobal in partnership with The Trump Organization."
+      }
+    ]
+  }
+]

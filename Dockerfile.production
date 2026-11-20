@@ -1,0 +1,81 @@
+# ==============================================================================
+# Multi-Stage Production Dockerfile for DarGlobal & Wasalt AI Chatbot
+# Compatible with Render, Railway, Hugging Face Spaces, and Cloud Run
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# Stage 1: Build Vite + React Production Assets
+# ------------------------------------------------------------------------------
+FROM node:20-alpine AS frontend-builder
+
+WORKDIR /app/frontend
+
+# Install frontend dependencies
+COPY frontend/package*.json ./
+RUN npm ci || npm install
+
+# Copy frontend source code and configs
+COPY frontend/ ./
+
+# Compile production bundle into /app/frontend/dist
+RUN npm run build
+
+# ------------------------------------------------------------------------------
+# Stage 2: Production Python Backend Runtime
+# ------------------------------------------------------------------------------
+FROM python:3.11-slim AS production
+
+# Set Python environment flags
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PYTHONPATH=/app \
+    PORT=8000
+
+WORKDIR /app
+
+# Install system runtime dependencies (curl for container healthcheck)
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    curl \
+    && rm -rf /var/lib/apt/lists/*
+
+# Create unprivileged application user and persistent data folder
+RUN groupadd -g 10001 appgroup && \
+    useradd -u 10001 -g appgroup -s /bin/bash -m appuser && \
+    mkdir -p /app/data
+
+# Install Python backend dependencies
+COPY backend/requirements.txt ./backend/
+RUN pip install --no-cache-dir --upgrade pip && \
+    pip install --no-cache-dir -r backend/requirements.txt
+
+# Pre-download local ONNX models for sub-second container cold start
+RUN python -c "from fastembed import TextEmbedding; TextEmbedding(model_name='BAAI/bge-small-en-v1.5'); from flashrank import Ranker; Ranker(model_name='ms-marco-MiniLM-L-12-v2')"
+
+# Copy backend application source code
+COPY backend/ ./backend/
+
+# Copy self-contained structured stores, knowledge base, and pre-built indices
+COPY data/structured/ ./data/structured/
+COPY data/unstructured/ ./data/unstructured/
+COPY data/darglobal/ ./data/darglobal/
+COPY data/index/ ./data/index/
+
+# Ensure static destination is clean and copy compiled frontend dist from Stage 1
+RUN rm -rf ./backend/src/static && mkdir -p ./backend/src/static
+COPY --from=frontend-builder /app/frontend/dist ./backend/src/static
+
+# Set permissions for non-root execution across application and data storage
+RUN chown -R appuser:appgroup /app
+
+# Switch to non-root user
+USER appuser
+
+# Expose target ports (default 8000 for Render/Railway; 7860 for Hugging Face Spaces)
+EXPOSE 8000 7860
+
+# Container health check probe
+HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 \
+    CMD curl -f http://localhost:${PORT:-8000}/api/health || exit 1
+
+# Launch FastAPI app with Uvicorn, binding to $PORT dynamically provided by deployment platform
+CMD ["sh", "-c", "uvicorn backend.src.main:app --host 0.0.0.0 --port ${PORT:-8000}"]
