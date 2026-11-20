@@ -1,21 +1,60 @@
+# Version control and git metadata
+.git/
 **/.git
-**/.gitignore
-**/node_modules
-**/dist
-**/build
-**/__pycache__
+.gitignore
+
+# Virtual environments and python bytecode
+venv/
+.venv/
+ENV/
+**/__pycache__/
 **/*.pyc
-**/.pytest_cache
-**/.venv
-**/.env
-**/.DS_Store
+**/*.pyo
+**/*.pyd
+
+# Test caches and profiling data
+.pytest_cache/
+.deepeval/
+.coverage
+htmlcov/
+.tmp/
+
+# Frontend dependencies and intermediate build artifacts
+node_modules/
+frontend/node_modules/
+dist/
+frontend/dist/
+build/
 backend/src/static/
+
+# Secrets and environment configurations
+.env
+.env.*
+!.env.example
+
+# Scratch and offline developer evaluation scripts
+scratch_test.npz
+benchmark_rag.py
+inspect_raw_url.py
+
+# Raw scraper caches, browser profiles, and bronze dumps (400+ MB)
+data/wasalt/
+data/samples/
+data/checkpoints/
+data/*.jsonl
+data/*.csv
+data/index/qdrant/
+data/index/*.db-wal
+data/index/*.db-shm
+
+# OS and IDE files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Documentation and project plans not needed at runtime
 README.md
 skills.md
 darglobal_wasalt_chatbot_project_plan.md
-
-# Ignore large raw scraping caches and bronze dumps
-data/wasalt/
-data/samples/
-data/*.jsonl
-data/checkpoints/
+data_document.md

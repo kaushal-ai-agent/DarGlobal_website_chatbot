@@ -1,0 +1,591 @@
+{
+  "source_url": "https://darglobal.co.uk/",
+  "scraped_at": "2026-11-19T07:54:36.452008+00:00",
+  "hamburger_menu": {
+    "categories": {
+      "BUILDING COMMUNITIES": [],
+      "REAL ESTATE DEVELOPMENTS": [
+        {
+          "label": "Agent Connect",
+          "url": "https://agents.darglobal.co.uk/"
+        },
+        {
+          "label": "Investor Relations",
+          "url": "https://darglobal.co.uk/investor"
+        },
+        {
+          "label": "Blogs",
+          "url": "https://darglobal.co.uk/blog"
+        },
+        {
+          "label": "News",
+          "url": "https://darglobal.co.uk/press"
+        },
+        {
+          "label": "Careers",
+          "url": "https://darglobal.thetalentpool.co.in/web/careers/#/positions"
+        },
+        {
+          "label": "Pay Online",
+          "url": "https://darglobal.co.uk/pay-online"
+        },
+        {
+          "label": "Get in Touch",
+          "url": "https://darglobal.co.uk/get-in-touch"
+        },
+        {
+          "label": "Why Invest",
+          "url": "https://darglobal.co.uk/why-invest"
+        },
+        {
+          "label": "Terms of Use",
+          "url": "https://darglobal.co.uk/terms-of-uses"
+        },
+        {
+          "label": "Cookie Policy",
+          "url": "https://darglobal.co.uk/terms-conditions"
+        },
+        {
+          "label": "Anti slavery and human trafficking statement",
+          "url": "https://cdn.darglobal.co.uk/DG_Anti_Slavery_Statement_FY_2026_7af7efaf3a.pdf"
+        },
+        {
+          "label": "Remuneration Committee",
+          "url": "https://cdn.darglobal.co.uk/Remuneration_Committee_12834cfd1e.pdf"
+        },
+        {
+          "label": "Nomination Committee",
+          "url": "https://cdn.darglobal.co.uk/Nomination_Committee_To_Rs_v2_1_CLEAN_0b9a75cbd8.pdf"
+        },
+        {
+          "label": "Audit & Risk",
+          "url": "https://cdn.darglobal.co.uk/Audit_and_Risk_2026_41cd00b3f9.pdf"
+        },
+        {
+          "label": "FAQ - Frequently Asked Questions",
+          "url": "https://darglobal.co.uk/faq"
+        },
+        {
+          "label": "Insights",
+          "url": "https://darglobal.co.uk/insights"
+        }
+      ],
+      "ASSET MANAGEMENT": []
+    },
+    "direct_links": [
+      {
+        "label": "Premiere Edition Collection",
+        "url": "https://darglobal.co.uk/one-of-one"
+      },
+      {
+        "label": "Agent Connect",
+        "url": "https://agents.darglobal.co.uk/"
+      },
+      {
+        "label": "Investor Relations",
+        "url": "https://darglobal.co.uk/investor"
+      },
+      {
+        "label": "Blogs",
+        "url": "https://darglobal.co.uk/blog"
+      },
+      {
+        "label": "News",
+        "url": "https://darglobal.co.uk/press"
+      },
+      {
+        "label": "Careers",
+        "url": "https://darglobal.thetalentpool.co.in/web/careers/#/positions"
+      },
+      {
+        "label": "Pay Online",
+        "url": "https://darglobal.co.uk/pay-online"
+      },
+      {
+        "label": "Get in Touch",
+        "url": "https://darglobal.co.uk/get-in-touch"
+      },
+      {
+        "label": "Why Invest",
+        "url": "https://darglobal.co.uk/why-invest"
+      },
+      {
+        "label": "Privacy Policy",
+        "url": "https://darglobal.co.uk/privacy-policy"
+      },
+      {
+        "label": "Terms of Use",
+        "url": "https://darglobal.co.uk/terms-of-uses"
+      },
+      {
+        "label": "Cookie Policy",
+        "url": "https://darglobal.co.uk/terms-conditions"
+      },
+      {
+        "label": "Anti slavery and human trafficking statement",
+        "url": "https://cdn.darglobal.co.uk/DG_Anti_Slavery_Statement_FY_2026_7af7efaf3a.pdf"
+      },
+      {
+        "label": "Remuneration Committee",
+        "url": "https://cdn.darglobal.co.uk/Remuneration_Committee_12834cfd1e.pdf"
+      },
+      {
+        "label": "Nomination Committee",
+        "url": "https://cdn.darglobal.co.uk/Nomination_Committee_To_Rs_v2_1_CLEAN_0b9a75cbd8.pdf"
+      },
+      {
+        "label": "Audit & Risk",
+        "url": "https://cdn.darglobal.co.uk/Audit_and_Risk_2026_41cd00b3f9.pdf"
+      },
+      {
+        "label": "FAQ - Frequently Asked Questions",
+        "url": "https://darglobal.co.uk/faq"
+      },
+      {
+        "label": "Insights",
+        "url": "https://darglobal.co.uk/insights"
+      }
+    ],
+    "social_links": []
+  },
+  "footer_links": [
+    {
+      "label": "Luxury Villas in UAE",
+      "url": "https://darglobal.co.uk/projects/properties-in-uae/villas"
+    },
+    {
+      "label": "Luxury Apartments in UK",
+      "url": "https://darglobal.co.uk/projects/properties-in-uk/apartments"
+    },
+    {
+      "label": "Luxury Villas in Spain",
+      "url": "https://darglobal.co.uk/projects/properties-in-spain/villas"
+    },
+    {
+      "label": "Luxury Apartments in Oman",
+      "url": "https://darglobal.co.uk/projects/properties-in-oman/apartments"
+    },
+    {
+      "label": "Luxury Villas in Qatar",
+      "url": "https://darglobal.co.uk/projects/properties-in-qatar/villas"
+    },
+    {
+      "label": "Luxury Properties in UAE",
+      "url": "https://darglobal.co.uk/projects/properties-in-uae"
+    },
+    {
+      "label": "Luxury Properties in UK",
+      "url": "https://darglobal.co.uk/projects/properties-in-uk"
+    },
+    {
+      "label": "Luxury Properties in Saudi Arabia",
+      "url": "https://darglobal.co.uk/projects/properties-in-saudi-arabia"
+    },
+    {
+      "label": "Luxury Properties in Oman",
+      "url": "https://darglobal.co.uk/projects/properties-in-oman"
+    },
+    {
+      "label": "Luxury Properties in Qatar",
+      "url": "https://darglobal.co.uk/projects/properties-in-qatar"
+    },
+    {
+      "label": "Luxury Properties in Spain",
+      "url": "https://darglobal.co.uk/projects/properties-in-spain"
+    },
+    {
+      "label": "Luxury Villas in Saudi Arabia",
+      "url": "https://darglobal.co.uk/projects/properties-in-saudi-arabia/villas"
+    },
+    {
+      "label": "Luxury Apartments in Saudi Arabia",
+      "url": "https://darglobal.co.uk/projects/properties-in-saudi-arabia/apartments"
+    },
+    {
+      "label": "Luxury Mansions in Saudi Arabia",
+      "url": "https://darglobal.co.uk/rayana/trump-mansions"
+    },
+    {
+      "label": "Luxury Plots in Saudi Arabia",
+      "url": "https://darglobal.co.uk/amaya/amaya-plots"
+    },
+    {
+      "label": "Luxury Hotel Residences in Oman",
+      "url": "https://darglobal.co.uk/projects/properties-in-oman/hotel-rooms"
+    },
+    {
+      "label": "Real Estate Investments",
+      "url": "https://darglobal.co.uk/projects"
+    },
+    {
+      "label": "darglobal.co.uk",
+      "url": "https://darglobal.co.uk/"
+    },
+    {
+      "label": "Premiere Edition Collection",
+      "url": "https://darglobal.co.uk/one-of-one"
+    },
+    {
+      "label": "Agent Connect",
+      "url": "https://agents.darglobal.co.uk/"
+    },
+    {
+      "label": "Investor Relations",
+      "url": "https://darglobal.co.uk/investor"
+    },
+    {
+      "label": "Blogs",
+      "url": "https://darglobal.co.uk/blog"
+    },
+    {
+      "label": "News",
+      "url": "https://darglobal.co.uk/press"
+    },
+    {
+      "label": "Careers",
+      "url": "https://darglobal.thetalentpool.co.in/web/careers/#/positions"
+    },
+    {
+      "label": "Pay Online",
+      "url": "https://darglobal.co.uk/pay-online"
+    },
+    {
+      "label": "Get in Touch",
+      "url": "https://darglobal.co.uk/get-in-touch"
+    },
+    {
+      "label": "Why Invest",
+      "url": "https://darglobal.co.uk/why-invest"
+    },
+    {
+      "label": "Visit Instagram",
+      "url": "https://www.instagram.com/darglobalofficial/?igshid=YmMyMTA2M2Y%3D"
+    },
+    {
+      "label": "Visit Facebook",
+      "url": "https://www.facebook.com/DarGlobalOfficial"
+    },
+    {
+      "label": "Visit Twitter",
+      "url": "https://twitter.com/dar_global"
+    },
+    {
+      "label": "Visit LinkedIn",
+      "url": "https://www.linkedin.com/company/darglobalofficial/"
+    },
+    {
+      "label": "Visit Linktree",
+      "url": "https://linktr.ee/darglobalofficial?fbclid=PAAabloACLThlCSHAjZslB81YbvyFOjbT8aPHlhvJLaoHkNJ_3s8jj2aoOeJs_aem_AacurY0cZ0OdQT3iwkCpcGWDZRpyWN02EwXAWx_i_xb-yFFXlky6_zytDhZe9hZOZJQ"
+    },
+    {
+      "label": "Privacy Policy",
+      "url": "https://darglobal.co.uk/privacy-policy"
+    },
+    {
+      "label": "Terms of Use",
+      "url": "https://darglobal.co.uk/terms-of-uses"
+    },
+    {
+      "label": "Cookie Policy",
+      "url": "https://darglobal.co.uk/terms-conditions"
+    },
+    {
+      "label": "Anti slavery and human trafficking statement",
+      "url": "https://cdn.darglobal.co.uk/DG_Anti_Slavery_Statement_FY_2026_7af7efaf3a.pdf"
+    },
+    {
+      "label": "Remuneration Committee",
+      "url": "https://cdn.darglobal.co.uk/Remuneration_Committee_12834cfd1e.pdf"
+    },
+    {
+      "label": "Nomination Committee",
+      "url": "https://cdn.darglobal.co.uk/Nomination_Committee_To_Rs_v2_1_CLEAN_0b9a75cbd8.pdf"
+    },
+    {
+      "label": "Audit & Risk",
+      "url": "https://cdn.darglobal.co.uk/Audit_and_Risk_2026_41cd00b3f9.pdf"
+    },
+    {
+      "label": "FAQ - Frequently Asked Questions",
+      "url": "https://darglobal.co.uk/faq"
+    },
+    {
+      "label": "Insights",
+      "url": "https://darglobal.co.uk/insights"
+    }
+  ],
+  "all_unique_links": [
+    {
+      "url": "https://agents.darglobal.co.uk/",
+      "label": "Agent Connect"
+    },
+    {
+      "url": "https://api.whatsapp.com/send?phone=97180040409&text=",
+      "label": "https://api.whatsapp.com/send?phone=97180040409&text="
+    },
+    {
+      "url": "https://cdn.darglobal.co.uk/Audit_and_Risk_2026_41cd00b3f9.pdf",
+      "label": "Audit & Risk"
+    },
+    {
+      "url": "https://cdn.darglobal.co.uk/DG_Anti_Slavery_Statement_FY_2026_7af7efaf3a.pdf",
+      "label": "Anti slavery and human trafficking statement"
+    },
+    {
+      "url": "https://cdn.darglobal.co.uk/Nomination_Committee_To_Rs_v2_1_CLEAN_0b9a75cbd8.pdf",
+      "label": "Nomination Committee"
+    },
+    {
+      "url": "https://cdn.darglobal.co.uk/Remuneration_Committee_12834cfd1e.pdf",
+      "label": "Remuneration Committee"
+    },
+    {
+      "url": "https://darglobal.co.uk/",
+      "label": "https://darglobal.co.uk/"
+    },
+    {
+      "url": "https://darglobal.co.uk/about",
+      "label": "Explore the Portfolio"
+    },
+    {
+      "url": "https://darglobal.co.uk/amaya/amaya-plots",
+      "label": "Luxury Plots in Saudi Arabia"
+    },
+    {
+      "url": "https://darglobal.co.uk/blog",
+      "label": "Blogs"
+    },
+    {
+      "url": "https://darglobal.co.uk/commercial",
+      "label": "discover more"
+    },
+    {
+      "url": "https://darglobal.co.uk/exclusive-membership",
+      "label": "Apply for Membership"
+    },
+    {
+      "url": "https://darglobal.co.uk/faq",
+      "label": "FAQ - Frequently Asked Questions"
+    },
+    {
+      "url": "https://darglobal.co.uk/get-in-touch",
+      "label": "Get in Touch"
+    },
+    {
+      "url": "https://darglobal.co.uk/hospitality",
+      "label": "discover more"
+    },
+    {
+      "url": "https://darglobal.co.uk/insights",
+      "label": "Insights"
+    },
+    {
+      "url": "https://darglobal.co.uk/investor",
+      "label": "Investor Relations"
+    },
+    {
+      "url": "https://darglobal.co.uk/landing-page/aida",
+      "label": "Live Feed OMAN • MASTERPLAN AIDA One of the world’s largest premium mixed-use developments."
+    },
+    {
+      "url": "https://darglobal.co.uk/lp/trump-international-qatar",
+      "label": "SIMAISMA • QATAR Trump International Simaisma, Qatar"
+    },
+    {
+      "url": "https://darglobal.co.uk/luxury-golf-communities",
+      "label": "discover more"
+    },
+    {
+      "url": "https://darglobal.co.uk/one-of-one",
+      "label": "Premiere Edition Collection"
+    },
+    {
+      "url": "https://darglobal.co.uk/partners/aston-martin",
+      "label": "https://darglobal.co.uk/partners/aston-martin"
+    },
+    {
+      "url": "https://darglobal.co.uk/partners/elie-saab",
+      "label": "https://darglobal.co.uk/partners/elie-saab"
+    },
+    {
+      "url": "https://darglobal.co.uk/partners/fendi-casa",
+      "label": "https://darglobal.co.uk/partners/fendi-casa"
+    },
+    {
+      "url": "https://darglobal.co.uk/partners/lamborghini",
+      "label": "https://darglobal.co.uk/partners/lamborghini"
+    },
+    {
+      "url": "https://darglobal.co.uk/partners/marriott-residences-aida-oman",
+      "label": "https://darglobal.co.uk/partners/marriott-residences-aida-oman"
+    },
+    {
+      "url": "https://darglobal.co.uk/partners/missoni",
+      "label": "https://darglobal.co.uk/partners/missoni"
+    },
+    {
+      "url": "https://darglobal.co.uk/partners/mouawad",
+      "label": "https://darglobal.co.uk/partners/mouawad"
+    },
+    {
+      "url": "https://darglobal.co.uk/partners/pagani",
+      "label": "https://darglobal.co.uk/partners/pagani"
+    },
+    {
+      "url": "https://darglobal.co.uk/partners/paramount",
+      "label": "https://darglobal.co.uk/partners/paramount"
+    },
+    {
+      "url": "https://darglobal.co.uk/partners/the-trump-organization",
+      "label": "https://darglobal.co.uk/partners/the-trump-organization"
+    },
+    {
+      "url": "https://darglobal.co.uk/partners/w-hotels",
+      "label": "https://darglobal.co.uk/partners/w-hotels"
+    },
+    {
+      "url": "https://darglobal.co.uk/pay-online",
+      "label": "Pay Online"
+    },
+    {
+      "url": "https://darglobal.co.uk/press",
+      "label": "view all"
+    },
+    {
+      "url": "https://darglobal.co.uk/press/dar-global-appoints-gulf-asia-contracting-for-trump-international-hotel-tower-dubai",
+      "label": "Aug 06, 2026 Dar Global appoints Gulf Asia Contracting for Trump International Hotel & Tower, Dubai Dar Global, the London-listed luxury real estate developer, has awarded the construction contract to Gulf Asia Contracting for the podium of Trump International Hotel & Tower, Duba... View more"
+    },
+    {
+      "url": "https://darglobal.co.uk/press/dar-global-capital-partners-targets-high-value-real-estate-opportunities-dubai",
+      "label": "Oct 26, 2026 Dar Global Capital Partners Targets High-Value Real Estate Opportunities in Dubai Across Global Investment Mandate Dar Global Capital Partners (DGCP), the alternative asset management arm of London-listed luxury international developer Dar Global, today announced its strategic focus on deployin... View more"
+    },
+    {
+      "url": "https://darglobal.co.uk/press/dar-global-delivers-66-percent-revenue-growth-hy-2026-portfolio-gdv-reaches-23-billion",
+      "label": "Sep 30, 2026 Dar Global delivers 66% revenue growth in HY 2026 as portfolio GDV reaches $23bln Dar Global, the London-listed luxury international real estate developer, recently announced its unaudited interim results for the six months ended 30 June 2026 (HY 2026), reportin... View more"
+    },
+    {
+      "url": "https://darglobal.co.uk/press/dar-global-expands-saudi-arabia-portfolio-with-new-jeddah-development-valued-at-sar-1-billion",
+      "label": "Nov 16, 2026 Dar Global Expands Saudi Arabia Portfolio with New Jeddah Development Valued at SAR 1 Billion Dar Global, the London-listed international luxury real estate developer, today announced plans for a new mixed-use development in Jeddah, Saudi Arabia, with an estimated gross dev... View more"
+    },
+    {
+      "url": "https://darglobal.co.uk/press/dar-global-opens-sales-trump-villas-simaisma-qatar-unprecedented-interest",
+      "label": "Oct 07, 2026 Dar Global Opens Sales for Trump Villas Simaisma, Qatar with Unprecedented Interest Dar Global, the London-listed luxury international real estate developer, has officially opened sales for its Trump Villas within Trump International Golf Club Simaisma, Qatar, wit... View more"
+    },
+    {
+      "url": "https://darglobal.co.uk/press/darglobal-fendi-casa-announce-azure-oceanfront-villas-oman",
+      "label": "Jun 29, 2026 Dar Global and Fendi Casa announce Azure Oceanfront Villas in Oman Dar Global and FENDI Casa announce the launch of Azure Oceanfront Villas, a collection of ultra-luxury mansions with interiors by FENDI Casa, set within the prestigious AIDA cliff... View more"
+    },
+    {
+      "url": "https://darglobal.co.uk/privacy-policy",
+      "label": "Privacy Policy"
+    },
+    {
+      "url": "https://darglobal.co.uk/projects",
+      "label": "Explore our projects"
+    },
+    {
+      "url": "https://darglobal.co.uk/projects/properties-in-oman",
+      "label": "Luxury Properties in Oman"
+    },
+    {
+      "url": "https://darglobal.co.uk/projects/properties-in-oman/apartments",
+      "label": "Luxury Apartments in Oman"
+    },
+    {
+      "url": "https://darglobal.co.uk/projects/properties-in-oman/hotel-rooms",
+      "label": "Luxury Hotel Residences in Oman"
+    },
+    {
+      "url": "https://darglobal.co.uk/projects/properties-in-qatar",
+      "label": "Luxury Properties in Qatar"
+    },
+    {
+      "url": "https://darglobal.co.uk/projects/properties-in-qatar/villas",
+      "label": "Luxury Villas in Qatar"
+    },
+    {
+      "url": "https://darglobal.co.uk/projects/properties-in-saudi-arabia",
+      "label": "Luxury Properties in Saudi Arabia"
+    },
+    {
+      "url": "https://darglobal.co.uk/projects/properties-in-saudi-arabia/apartments",
+      "label": "Luxury Apartments in Saudi Arabia"
+    },
+    {
+      "url": "https://darglobal.co.uk/projects/properties-in-saudi-arabia/villas",
+      "label": "Luxury Villas in Saudi Arabia"
+    },
+    {
+      "url": "https://darglobal.co.uk/projects/properties-in-spain",
+      "label": "Luxury Properties in Spain"
+    },
+    {
+      "url": "https://darglobal.co.uk/projects/properties-in-spain/villas",
+      "label": "Luxury Villas in Spain"
+    },
+    {
+      "url": "https://darglobal.co.uk/projects/properties-in-uae",
+      "label": "Luxury Properties in UAE"
+    },
+    {
+      "url": "https://darglobal.co.uk/projects/properties-in-uae/villas",
+      "label": "Luxury Villas in UAE"
+    },
+    {
+      "url": "https://darglobal.co.uk/projects/properties-in-uk",
+      "label": "Luxury Properties in UK"
+    },
+    {
+      "url": "https://darglobal.co.uk/projects/properties-in-uk/apartments",
+      "label": "Luxury Apartments in UK"
+    },
+    {
+      "url": "https://darglobal.co.uk/rayana/trump-mansions",
+      "label": "WADI SAFAR • RIYADH • SAUDI ARABIA Trump Mansions"
+    },
+    {
+      "url": "https://darglobal.co.uk/terms-conditions",
+      "label": "Cookie Policy"
+    },
+    {
+      "url": "https://darglobal.co.uk/terms-of-uses",
+      "label": "Terms of Use"
+    },
+    {
+      "url": "https://darglobal.co.uk/tokenization",
+      "label": "Real Estate Tokenization"
+    },
+    {
+      "url": "https://darglobal.co.uk/why-invest",
+      "label": "WHY INVEST WITH DARGLOBAL"
+    },
+    {
+      "url": "https://darglobal.thetalentpool.co.in/web/careers/#/positions",
+      "label": "Careers"
+    },
+    {
+      "url": "https://linktr.ee/darglobalofficial?fbclid=PAAabloACLThlCSHAjZslB81YbvyFOjbT8aPHlhvJLaoHkNJ_3s8jj2aoOeJs_aem_AacurY0cZ0OdQT3iwkCpcGWDZRpyWN02EwXAWx_i_xb-yFFXlky6_zytDhZe9hZOZJQ",
+      "label": "https://linktr.ee/darglobalofficial?fbclid=PAAabloACLThlCSHAjZslB81YbvyFOjbT8aPHlhvJLaoHkNJ_3s8jj2aoOeJs_aem_AacurY0cZ0OdQT3iwkCpcGWDZRpyWN02EwXAWx_i_xb-yFFXlky6_zytDhZe9hZOZJQ"
+    },
+    {
+      "url": "https://twitter.com/dar_global",
+      "label": "https://twitter.com/dar_global"
+    },
+    {
+      "url": "https://www.clickcease.com",
+      "label": "https://www.clickcease.com"
+    },
+    {
+      "url": "https://www.facebook.com/DarGlobalOfficial",
+      "label": "https://www.facebook.com/DarGlobalOfficial"
+    },
+    {
+      "url": "https://www.instagram.com/darglobalofficial/?igshid=YmMyMTA2M2Y%3D",
+      "label": "https://www.instagram.com/darglobalofficial/?igshid=YmMyMTA2M2Y%3D"
+    },
+    {
+      "url": "https://www.linkedin.com/company/darglobalofficial/",
+      "label": "https://www.linkedin.com/company/darglobalofficial/"
+    }
+  ]
+}

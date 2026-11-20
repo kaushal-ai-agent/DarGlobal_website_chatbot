@@ -31,7 +31,7 @@ export default function ChatWindow({ messages, loading, onSendMessage }) {
         {loading && (
           <div className="flex items-center space-x-2 text-xs font-mono text-neutral-500 py-2">
             <span className="inline-block w-2 h-2 bg-[#2563EB] animate-pulse"></span>
-            <span>SEARCHING CHROMADB &amp; REASONING...</span>
+            <span>SEARCHING KNOWLEDGE BASE &amp; REASONING...</span>
           </div>
         )}
         <div ref={messagesEndRef} />

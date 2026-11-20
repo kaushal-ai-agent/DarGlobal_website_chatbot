@@ -20,12 +20,12 @@ frontend/node_modules/
 frontend/dist/
 backend/src/static/assets/
 
-# Local databases & scraped data
-data/
-*.chroma
-scraped_data.json
+# Scratch & Dev Profiling
+scratch_test.npz
+.tmp/
+.deepeval/
 
-# Environment variables
+# Environment variables (Never commit secrets!)
 .env
 .env.local
 .env.production
@@ -35,3 +35,34 @@ scraped_data.json
 .idea/
 .DS_Store
 Thumbs.db
+
+# ==============================================================================
+# Data Directory Management (Selective Whitelisting for Cloud Deployment)
+# ==============================================================================
+# Ignore raw scraping dumps, browser automation profiles, checkpoints, and logs
+data/wasalt/
+data/samples/
+data/checkpoints/
+data/*.jsonl
+data/*.csv
+data/index/qdrant/
+data/index/*.db-wal
+data/index/*.db-shm
+*.chroma
+scraped_data.json
+
+# Whitelist production SQLite DB, knowledge Markdown files, manifests, and embeddings
+!data/
+!data/.gitkeep
+!data/structured/
+!data/structured/db/
+!data/structured/db/real_estate.db
+!data/structured/manifests/
+!data/structured/manifests/**
+!data/unstructured/
+!data/unstructured/**
+!data/darglobal/
+!data/darglobal/**
+!data/index/
+!data/index/rag_index.db
+!data/index/chunk_embeddings.npz
