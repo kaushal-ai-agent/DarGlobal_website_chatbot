@@ -101,3 +101,86 @@
 [2026-11-21 02:45:51.348] [AFTER_MODEL] {"agent": "property_database_agent", "response_snippet": ""}
 [2026-11-21 02:45:51.348] [AFTER_MODEL] {"agent": "property_database_agent", "response_snippet": "Here are the full inspection details for the lowest-priced property in our Riyadh portfolio (**wasalt_5975952** in An-Nadheem):\n\n### **Property Overvi"}
 [2026-11-21 02:45:51.348] [AFTER_AGENT] {"agent": "property_database_agent", "session_id": "unknown", "last_active_agent": "property_database_agent"}
+[2026-11-21 20:48:07.657] [BEFORE_AGENT] {"agent": "real_estate_orchestrator", "session_id": "unknown", "last_active_agent": "None"}
+[2026-11-21 20:48:10.147] [BEFORE_MODEL] {"agent": "real_estate_orchestrator", "model": "gemini-3.5-flash-lite", "contents_count": 2, "last_user_message_snippet": "Tell me about luxury villas in Riyadh by DarGlobal"}
+[2026-11-21 20:48:11.343] [AFTER_MODEL] {"agent": "real_estate_orchestrator", "response_snippet": ""}
+[2026-11-21 20:48:11.343] [BEFORE_TOOL] {"tool": "transfer_to_agent", "arguments": {"agent_name": "property_database_agent"}}
+[2026-11-21 20:48:11.343] [AFTER_TOOL] {"tool": "transfer_to_agent", "count": null, "success": null, "found": null}
+[2026-11-21 20:48:11.343] [BEFORE_AGENT] {"agent": "property_database_agent", "session_id": "unknown", "last_active_agent": "None"}
+[2026-11-21 20:48:11.359] [BEFORE_MODEL] {"agent": "property_database_agent", "model": "gemini-3.5-flash-lite", "contents_count": 4, "last_user_message_snippet": "For context: below is a transcript of what another agent did, quoted between <<<BEGIN_QUOTED_AGENT_CONTENT>>> and <<<END"}
+[2026-11-21 20:48:12.581] [AFTER_MODEL] {"agent": "property_database_agent", "response_snippet": ""}
+[2026-11-21 20:48:12.581] [BEFORE_TOOL] {"tool": "execute_safe_sql", "arguments": {"sql_query": "SELECT * FROM v_darglobal_projects WHERE country = 'Saudi Arabia'"}}
+[2026-11-21 20:48:12.613] [AFTER_TOOL] {"tool": "execute_safe_sql", "count": null, "success": true, "found": null}
+[2026-11-21 20:48:12.631] [BEFORE_MODEL] {"agent": "property_database_agent", "model": "gemini-3.5-flash-lite", "contents_count": 6, "last_user_message_snippet": "The text between <<<BEGIN_SYSTEM_INSTRUCTION>>> and <<<END_SYSTEM_INSTRUCTION>>> below is your own system instruction fo"}
+[2026-11-21 20:48:16.030] [AFTER_MODEL] {"agent": "property_database_agent", "response_snippet": "DarGlobal features exceptional ultra-luxury villa and mansion developments in **Riyadh**, blending world-renowned design houses with prime locations i"}
+[2026-11-21 20:48:16.030] [AFTER_AGENT] {"agent": "property_database_agent", "session_id": "unknown", "last_active_agent": "property_database_agent"}
+[2026-11-21 20:48:16.211] [BEFORE_AGENT] {"agent": "real_estate_orchestrator", "session_id": "unknown", "last_active_agent": "None"}
+[2026-11-21 20:48:16.211] [BEFORE_MODEL] {"agent": "real_estate_orchestrator", "model": "gemini-3.5-flash-lite", "contents_count": 2, "last_user_message_snippet": "Looking for 4 bedroom villas in Dubai"}
+[2026-11-21 20:48:17.422] [AFTER_MODEL] {"agent": "real_estate_orchestrator", "response_snippet": ""}
+[2026-11-21 20:48:17.429] [BEFORE_TOOL] {"tool": "transfer_to_agent", "arguments": {"agent_name": "company_knowledge_agent"}}
+[2026-11-21 20:48:17.429] [AFTER_TOOL] {"tool": "transfer_to_agent", "count": null, "success": null, "found": null}
+[2026-11-21 20:48:17.437] [BEFORE_AGENT] {"agent": "company_knowledge_agent", "session_id": "unknown", "last_active_agent": "None"}
+[2026-11-21 20:48:17.451] [BEFORE_MODEL] {"agent": "company_knowledge_agent", "model": "gemini-3.5-flash-lite", "contents_count": 4, "last_user_message_snippet": "For context: below is a transcript of what another agent did, quoted between <<<BEGIN_QUOTED_AGENT_CONTENT>>> and <<<END"}
+[2026-11-21 20:48:18.561] [AFTER_MODEL] {"agent": "company_knowledge_agent", "response_snippet": ""}
+[2026-11-21 20:48:18.561] [BEFORE_TOOL] {"tool": "transfer_to_agent", "arguments": {"agent_name": "property_database_agent"}}
+[2026-11-21 20:48:18.561] [AFTER_TOOL] {"tool": "transfer_to_agent", "count": null, "success": null, "found": null}
+[2026-11-21 20:48:18.578] [BEFORE_AGENT] {"agent": "property_database_agent", "session_id": "unknown", "last_active_agent": "None"}
+[2026-11-21 20:48:18.578] [BEFORE_MODEL] {"agent": "property_database_agent", "model": "gemini-3.5-flash-lite", "contents_count": 6, "last_user_message_snippet": "For context: below is a transcript of what another agent did, quoted between <<<BEGIN_QUOTED_AGENT_CONTENT>>> and <<<END"}
+[2026-11-21 20:48:19.794] [AFTER_MODEL] {"agent": "property_database_agent", "response_snippet": ""}
+[2026-11-21 20:48:19.798] [BEFORE_TOOL] {"tool": "search_luxury_projects", "arguments": {"city": "Dubai", "country": "UAE"}}
+[2026-11-21 20:48:19.807] [AFTER_TOOL] {"tool": "search_luxury_projects", "count": 5, "success": null, "found": null}
+[2026-11-21 20:48:19.818] [BEFORE_MODEL] {"agent": "property_database_agent", "model": "gemini-3.5-flash-lite", "contents_count": 8, "last_user_message_snippet": "The text between <<<BEGIN_SYSTEM_INSTRUCTION>>> and <<<END_SYSTEM_INSTRUCTION>>> below is your own system instruction fo"}
+[2026-11-21 20:48:22.290] [AFTER_MODEL] {"agent": "property_database_agent", "response_snippet": ""}
+[2026-11-21 20:48:22.295] [BEFORE_TOOL] {"tool": "transfer_to_agent", "arguments": {"agent_name": "real_estate_orchestrator"}}
+[2026-11-21 20:48:22.297] [AFTER_TOOL] {"tool": "transfer_to_agent", "count": null, "success": null, "found": null}
+[2026-11-21 20:48:22.304] [BEFORE_AGENT] {"agent": "real_estate_orchestrator", "session_id": "unknown", "last_active_agent": "None"}
+[2026-11-21 20:48:22.312] [BEFORE_MODEL] {"agent": "real_estate_orchestrator", "model": "gemini-3.5-flash-lite", "contents_count": 10, "last_user_message_snippet": "For context: below is a transcript of what another agent did, quoted between <<<BEGIN_QUOTED_AGENT_CONTENT>>> and <<<END"}
+[2026-11-21 20:48:24.557] [AFTER_MODEL] {"agent": "real_estate_orchestrator", "response_snippet": "Here are premier luxury properties in **Dubai** featuring 4-bedroom configurations from DarGlobal's portfolio:\n\n### 1. **D-Villas at Jumeirah Golf Est"}
+[2026-11-21 20:48:24.560] [AFTER_AGENT] {"agent": "real_estate_orchestrator", "session_id": "unknown", "last_active_agent": "real_estate_orchestrator"}
+[2026-11-21 20:48:24.592] [BEFORE_AGENT] {"agent": "real_estate_orchestrator", "session_id": "unknown", "last_active_agent": "None"}
+[2026-11-21 20:48:24.604] [BEFORE_MODEL] {"agent": "real_estate_orchestrator", "model": "gemini-3.5-flash-lite", "contents_count": 2, "last_user_message_snippet": "What is the price range for those apartments?"}
+[2026-11-21 20:48:25.628] [AFTER_MODEL] {"agent": "real_estate_orchestrator", "response_snippet": ""}
+[2026-11-21 20:48:25.631] [BEFORE_TOOL] {"tool": "transfer_to_agent", "arguments": {"agent_name": "property_database_agent"}}
+[2026-11-21 20:48:25.633] [AFTER_TOOL] {"tool": "transfer_to_agent", "count": null, "success": null, "found": null}
+[2026-11-21 20:48:25.638] [BEFORE_AGENT] {"agent": "property_database_agent", "session_id": "unknown", "last_active_agent": "None"}
+[2026-11-21 20:48:25.646] [BEFORE_MODEL] {"agent": "property_database_agent", "model": "gemini-3.5-flash-lite", "contents_count": 4, "last_user_message_snippet": "For context: below is a transcript of what another agent did, quoted between <<<BEGIN_QUOTED_AGENT_CONTENT>>> and <<<END"}
+[2026-11-21 20:48:26.791] [AFTER_MODEL] {"agent": "property_database_agent", "response_snippet": ""}
+[2026-11-21 20:48:26.791] [BEFORE_TOOL] {"tool": "execute_safe_sql", "arguments": {"sql_query": "SELECT MIN(price_amount) AS min_price, MAX(price_amount) AS max_price, AVG(price_amount) AS avg_price, COUNT(*) AS total_count FROM v_wasalt_listings WHERE property_type = 'apartment';"}}
+[2026-11-21 20:48:26.791] [AFTER_TOOL] {"tool": "execute_safe_sql", "count": null, "success": true, "found": null}
+[2026-11-21 20:48:26.791] [BEFORE_MODEL] {"agent": "property_database_agent", "model": "gemini-3.5-flash-lite", "contents_count": 6, "last_user_message_snippet": "The text between <<<BEGIN_SYSTEM_INSTRUCTION>>> and <<<END_SYSTEM_INSTRUCTION>>> below is your own system instruction fo"}
+[2026-11-21 20:48:28.936] [AFTER_MODEL] {"agent": "property_database_agent", "response_snippet": ""}
+[2026-11-21 20:48:28.939] [BEFORE_TOOL] {"tool": "transfer_to_agent", "arguments": {"agent_name": "real_estate_orchestrator"}}
+[2026-11-21 20:48:28.940] [AFTER_TOOL] {"tool": "transfer_to_agent", "count": null, "success": null, "found": null}
+[2026-11-21 20:48:28.945] [BEFORE_AGENT] {"agent": "real_estate_orchestrator", "session_id": "unknown", "last_active_agent": "None"}
+[2026-11-21 20:48:28.948] [BEFORE_MODEL] {"agent": "real_estate_orchestrator", "model": "gemini-3.5-flash-lite", "contents_count": 8, "last_user_message_snippet": "For context: below is a transcript of what another agent did, quoted between <<<BEGIN_QUOTED_AGENT_CONTENT>>> and <<<END"}
+[2026-11-21 20:48:30.382] [AFTER_MODEL] {"agent": "real_estate_orchestrator", "response_snippet": "For the apartments in our current Wasalt Riyadh portfolio (spanning 28 verified listings), the prices range from **320,000 SAR** up to **1,900,000 SAR"}
+[2026-11-21 20:48:30.383] [AFTER_AGENT] {"agent": "real_estate_orchestrator", "session_id": "unknown", "last_active_agent": "real_estate_orchestrator"}
+[2026-11-21 20:48:30.424] [BEFORE_AGENT] {"agent": "real_estate_orchestrator", "session_id": "unknown", "last_active_agent": "None"}
+[2026-11-21 20:48:30.424] [BEFORE_MODEL] {"agent": "real_estate_orchestrator", "model": "gemini-3.5-flash-lite", "contents_count": 2, "last_user_message_snippet": "\u0627\u0628\u062d\u062b \u0639\u0646 \u0641\u0644\u0644 \u0641\u0627\u062e\u0631\u0629 \u0644\u0644\u0628\u064a\u0639 \u0641\u064a \u0627\u0644\u0631\u064a\u0627\u0636 \u0628\u0645\u0633\u0627\u062d\u0629 500 \u0645\u062a\u0631 \u0645\u0631\u0628\u0639"}
+[2026-11-21 20:48:31.712] [AFTER_MODEL] {"agent": "real_estate_orchestrator", "response_snippet": ""}
+[2026-11-21 20:48:31.716] [BEFORE_TOOL] {"tool": "transfer_to_agent", "arguments": {"agent_name": "property_database_agent"}}
+[2026-11-21 20:48:31.717] [AFTER_TOOL] {"tool": "transfer_to_agent", "count": null, "success": null, "found": null}
+[2026-11-21 20:48:31.725] [BEFORE_AGENT] {"agent": "property_database_agent", "session_id": "unknown", "last_active_agent": "None"}
+[2026-11-21 20:48:31.733] [BEFORE_MODEL] {"agent": "property_database_agent", "model": "gemini-3.5-flash-lite", "contents_count": 4, "last_user_message_snippet": "For context: below is a transcript of what another agent did, quoted between <<<BEGIN_QUOTED_AGENT_CONTENT>>> and <<<END"}
+[2026-11-21 20:48:32.938] [AFTER_MODEL] {"agent": "property_database_agent", "response_snippet": ""}
+[2026-11-21 20:48:32.938] [BEFORE_TOOL] {"tool": "search_properties", "arguments": {"property_type": "villa", "city": "Riyadh"}}
+[2026-11-21 20:48:32.938] [AFTER_TOOL] {"tool": "search_properties", "count": 0, "success": null, "found": null}
+[2026-11-21 20:48:32.956] [BEFORE_MODEL] {"agent": "property_database_agent", "model": "gemini-3.5-flash-lite", "contents_count": 6, "last_user_message_snippet": "The text between <<<BEGIN_SYSTEM_INSTRUCTION>>> and <<<END_SYSTEM_INSTRUCTION>>> below is your own system instruction fo"}
+[2026-11-21 20:48:35.205] [AFTER_MODEL] {"agent": "property_database_agent", "response_snippet": ""}
+[2026-11-21 20:48:35.219] [BEFORE_TOOL] {"tool": "execute_safe_sql", "arguments": {"sql_query": "SELECT listing_id, title, property_type, city, district, price_amount, built_up_area_sqm, bedrooms, bathrooms, broker_agency_name, rega_ad_license_no, listing_url FROM v_wasalt_listings WHERE property_type = 'villa'"}}
+[2026-11-21 20:48:35.222] [AFTER_TOOL] {"tool": "execute_safe_sql", "count": null, "success": true, "found": null}
+[2026-11-21 20:48:35.222] [BEFORE_MODEL] {"agent": "property_database_agent", "model": "gemini-3.5-flash-lite", "contents_count": 8, "last_user_message_snippet": "The text between <<<BEGIN_SYSTEM_INSTRUCTION>>> and <<<END_SYSTEM_INSTRUCTION>>> below is your own system instruction fo"}
+[2026-11-21 20:48:37.893] [AFTER_MODEL] {"agent": "property_database_agent", "response_snippet": ""}
+[2026-11-21 20:48:37.893] [BEFORE_TOOL] {"tool": "execute_safe_sql", "arguments": {"sql_query": "SELECT DISTINCT property_type, city FROM v_wasalt_listings"}}
+[2026-11-21 20:48:37.893] [AFTER_TOOL] {"tool": "execute_safe_sql", "count": null, "success": true, "found": null}
+[2026-11-21 20:48:37.893] [BEFORE_MODEL] {"agent": "property_database_agent", "model": "gemini-3.5-flash-lite", "contents_count": 10, "last_user_message_snippet": "The text between <<<BEGIN_SYSTEM_INSTRUCTION>>> and <<<END_SYSTEM_INSTRUCTION>>> below is your own system instruction fo"}
+[2026-11-21 20:48:39.747] [AFTER_MODEL] {"agent": "property_database_agent", "response_snippet": ""}
+[2026-11-21 20:48:39.747] [BEFORE_TOOL] {"tool": "transfer_to_agent", "arguments": {"agent_name": "real_estate_orchestrator"}}
+[2026-11-21 20:48:39.747] [AFTER_TOOL] {"tool": "transfer_to_agent", "count": null, "success": null, "found": null}
+[2026-11-21 20:48:39.747] [BEFORE_AGENT] {"agent": "real_estate_orchestrator", "session_id": "unknown", "last_active_agent": "None"}
+[2026-11-21 20:48:39.762] [BEFORE_MODEL] {"agent": "real_estate_orchestrator", "model": "gemini-3.5-flash-lite", "contents_count": 12, "last_user_message_snippet": "For context: below is a transcript of what another agent did, quoted between <<<BEGIN_QUOTED_AGENT_CONTENT>>> and <<<END"}
+[2026-11-21 20:48:42.802] [AFTER_MODEL] {"agent": "real_estate_orchestrator", "response_snippet": "\u0623\u0647\u0644\u0627\u064b \u0628\u0643. \u0628\u0627\u0644\u0646\u0633\u0628\u0629 \u0644\u0637\u0644\u0628\u0643 \u062d\u0648\u0644 \u0627\u0644\u0628\u062d\u062b \u0639\u0646 **\u0641\u0644\u0644 \u0641\u0627\u062e\u0631\u0629 \u0644\u0644\u0628\u064a\u0639 \u0641\u064a \u0627\u0644\u0631\u064a\u0627\u0636 \u0628\u0645\u0633\u0627\u062d\u0629 500 \u0645\u062a\u0631 \u0645\u0631\u0628\u0639**:\n\n\u0646\u0648\u062f \u0625\u062d\u0627\u0637\u062a\u0643 \u0628\u0623\u0646 \u0642\u0627\u0639\u062f\u0629 \u0628\u064a\u0627\u0646\u0627\u062a\u0646\u0627 \u0627\u0644\u062d\u0627\u0644\u064a\u0629 \u0644\u0645\u0646\u0635\u0629 \"\u0648\u0633\u0627\u0626\u0637/Wasalt\" \u0641\u064a"}
+[2026-11-21 20:48:42.802] [AFTER_AGENT] {"agent": "real_estate_orchestrator", "session_id": "unknown", "last_active_agent": "real_estate_orchestrator"}
+[2026-11-21 20:48:43.516] [BEFORE_AGENT] {"agent": "real_estate_orchestrator", "session_id": "unknown", "last_active_agent": "None"}
+[2026-11-21 20:48:43.520] [BEFORE_MODEL] {"agent": "real_estate_orchestrator", "model": "gemini-3.5-flash-lite", "contents_count": 2, "last_user_message_snippet": "Tell me about Trump Tower Jeddah"}
+[2026-11-21 20:48:43.702] [ON_MODEL_ERROR] {"agent": "real_estate_orchestrator", "model": "gemini-3.5-flash-lite", "error_type": "_ResourceExhaustedError", "error_message": "\nOn how to mitigate this issue, please refer to:\n\nhttps://google.github.io/adk-docs/agents/models/google-gemini/#error-code-429-resource_exhausted\n\n\n429 Too Many Requests. {'message': '{\\n  \"error\": {\\n    \"code\": 429,\\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite, description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\\\\nPlease retry in 16.097581276s.\",\\n    \"status\": \"RESOURCE_EXHAUSTED\",\\n    \"details\": [\\n      {\\n        \"@type\": \"type.googleapis.com/google.rpc.Help\",\\n        \"links\": [\\n          {\\n            \"description\": \"Learn more about Gemini API quotas\",\\n            \"url\": \"https://aistudio.google.com/docs/rate-limits\"\\n          }\\n        ]\\n      },\\n      {\\n        \"@type\": \"type.googleapis.com/google.rpc.QuotaFailure\",\\n        \"violations\": [\\n          {\\n            \"description\": \"Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\",\\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\\n            \"quotaId\": \"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\",\\n            \"quotaDimensions\": {\\n              \"location\": \"global\",\\n              \"model\": \"gemini-3.5-flash-lite\"\\n            },\\n            \"quotaValue\": \"15\"\\n          }\\n        ]\\n      },\\n      {\\n        \"@type\": \"type.googleapis.com/google.rpc.RetryInfo\",\\n        \"retryDelay\": \"16s\"\\n      }\\n    ]\\n  }\\n}\\n', 'status': 'Too Many Requests'}"}
