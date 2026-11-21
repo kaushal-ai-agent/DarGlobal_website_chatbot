@@ -4,11 +4,11 @@ import ChatWindow from '../components/ChatWindow';
 import { useChat } from '../hooks/useChat';
 
 export default function ChatPage() {
-  const { messages, loading, sendMessage } = useChat();
+  const { messages, loading, sessionId, sendMessage, createNewSession } = useChat();
 
   return (
     <div className="min-h-screen flex flex-col bg-[#F8FAFC]">
-      <Header />
+      <Header sessionId={sessionId} onNewChat={createNewSession} />
       <main className="flex-1 flex justify-center">
         <ChatWindow
           messages={messages}

@@ -41,7 +41,7 @@ from .subagents.property_database_agent.tools import get_property_details
 # Root Conversational Orchestrator Agent
 root_agent = Agent(
     name="real_estate_orchestrator",
-    model=os.getenv("ADK_MODEL_NAME", "gemini-2.5-flash"),
+    model=os.getenv("ADK_MODEL_NAME", "gemini-3.5-flash-lite"),
     description=(
         "Main consultative conversational orchestrator for DarGlobal luxury developments "
         "and Wasalt Saudi real estate listings. Coordinates specialized sub-agents, tracks "

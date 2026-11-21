@@ -410,3 +410,4 @@ The folder `backend/src/static/` contains the compiled production distribution o
 ### Development vs. Production:
 - **In Development:** You run `npm run dev` in `frontend/` (Vite dev server at `http://localhost:5173`), which proxies API requests to `http://localhost:8000`. You do not need to touch `backend/src/static`.
 - **In Production:** Running `npm run build --prefix frontend` produces the build in `frontend/dist/`, which is copied into `backend/src/static/` (or mounted inside the Docker container via `Dockerfile.production`).
+"uvicorn backend.src.main:app --host 0.0.0.0 --port ${PORT:-8000}

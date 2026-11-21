@@ -1,4 +1,4 @@
-"""Pydantic V2 data contracts for API, scraping, and RAG entities."""
+"""Pydantic V2 data contracts for API, scraping, RAG entities, and ADK sessions."""
 
 from datetime import datetime, timezone
 from typing import Any, Dict, List, Literal, Optional
@@ -44,7 +44,7 @@ class ChatMessage(BaseModel):
 
 
 class ChatRequest(BaseModel):
-    """Incoming user chat query."""
+    """Incoming user chat query for non-streaming endpoint."""
     message: str = Field(..., min_length=1, description="User prompt or inquiry")
     conversation_id: Optional[str] = Field(None, description="Session ID for multi-turn history")
     history: List[ChatMessage] = Field(default_factory=list, description="Recent conversation history")
@@ -60,3 +60,27 @@ class ChatResponse(BaseModel):
         description="Retrieved property cards supporting the answer",
     )
     tokens_used: Optional[int] = Field(None, description="Total prompt + completion tokens")
+
+
+class StreamChatRequest(BaseModel):
+    """Incoming user chat query for SSE streaming endpoint."""
+    message: str = Field(..., min_length=1, description="User prompt or inquiry")
+    session_id: Optional[str] = Field(None, description="ADK session identifier")
+    user_id: str = Field("default_user", description="User identifier")
+    streaming: bool = Field(True, description="Enable partial text token streaming")
+
+
+class SessionResponse(BaseModel):
+    """Session creation response payload."""
+    session_id: str = Field(..., description="Unique ADK session identifier")
+    app_name: str = Field(..., description="Application name")
+    user_id: str = Field(..., description="Owner user identifier")
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+
+class SessionDetailResponse(BaseModel):
+    """Session inspection response payload."""
+    session_id: str = Field(..., description="Unique ADK session identifier")
+    app_name: str = Field(..., description="Application name")
+    user_id: str = Field(..., description="Owner user identifier")
+    event_count: int = Field(0, description="Total recorded turns/events in session")

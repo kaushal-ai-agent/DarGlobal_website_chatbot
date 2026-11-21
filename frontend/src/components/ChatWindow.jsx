@@ -28,10 +28,10 @@ export default function ChatWindow({ messages, loading, onSendMessage }) {
           <MessageBubble key={index} message={msg} />
         ))}
 
-        {loading && (
+        {loading && !messages.some((m) => m.isStreaming) && (
           <div className="flex items-center space-x-2 text-xs font-mono text-neutral-500 py-2">
             <span className="inline-block w-2 h-2 bg-[#2563EB] animate-pulse"></span>
-            <span>SEARCHING KNOWLEDGE BASE &amp; REASONING...</span>
+            <span>CONTACTING ROOT ORCHESTRATOR...</span>
           </div>
         )}
         <div ref={messagesEndRef} />

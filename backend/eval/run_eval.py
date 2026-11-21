@@ -22,7 +22,7 @@ PROJECT_ROOT = Path(__file__).resolve().parents[2]
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
-from backend.src.agent.harness import AgentHarness
+from backend.src.services.agent import AgentService
 from backend.src.rag.retriever import HybridRetriever
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]

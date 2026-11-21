@@ -25,9 +25,23 @@ from google.genai import types
 LOG_FILE = Path(__file__).resolve().parent / "agent_activity.log"
 
 
+def reset_log_file() -> None:
+    """Resets agent_activity.log on startup so it acts as temporary scratch telemetry and does not consume disk space."""
+    try:
+        timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        with open(LOG_FILE, "w", encoding="utf-8") as f:
+            f.write(f"[{timestamp}] [STARTUP] Temporary trace log initialized fresh.\n")
+    except Exception as e:
+        logging.getLogger("adk_callbacks").error(f"Failed to reset agent_activity.log: {e}")
+
+
 def log_step(step_name: str, payload: Dict[str, Any]) -> None:
     """Appends a structured trace log entry to agent_activity.log."""
     try:
+        # Keep log file bounded: If it exceeds 2MB, truncate and restart
+        if LOG_FILE.is_file() and LOG_FILE.stat().st_size > 2 * 1024 * 1024:
+            reset_log_file()
+
         timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f")[:-3]
         safe_payload = payload if isinstance(payload, dict) else {"raw": str(payload)}
         log_line = f"[{timestamp}] [{step_name}] {json.dumps(safe_payload, default=str)}\n"

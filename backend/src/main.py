@@ -2,17 +2,24 @@
 
 import os
 import sys
+from contextlib import asynccontextmanager
 from pathlib import Path
-from fastapi import FastAPI, HTTPException
-from fastapi.middleware.cors import CORSMiddleware
-from fastapi.staticfiles import StaticFiles
-from starlette.exceptions import HTTPException as StarletteHTTPException
-from starlette.types import Scope
+from dotenv import load_dotenv
 
 # Ensure project root is in sys.path when running backend/src/main.py directly
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
+
+# Load environment configuration from real_estate_advisor and root .env
+load_dotenv(PROJECT_ROOT / "backend" / "agents" / "real_estate_advisor" / ".env")
+load_dotenv(PROJECT_ROOT / ".env")
+
+from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
+from starlette.exceptions import HTTPException as StarletteHTTPException
+from starlette.types import Scope
 
 from backend.src.config.settings import settings
 from backend.src.routes.api import api_router
@@ -53,10 +60,36 @@ class SPAStaticFiles(StaticFiles):
             raise exc
 
 
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    """Application lifespan managing temporary log rotation and cleanup on startup."""
+    try:
+        from backend.agents.real_estate_advisor.callbacks import reset_log_file
+        reset_log_file()
+        logger.info("Reset agent_activity.log to fresh state on startup.")
+    except Exception as exc:
+        logger.warning("Could not reset agent activity log on startup: %s", exc)
+
+    try:
+        log_dir = PROJECT_ROOT / "data" / "wasalt" / "logs"
+        if log_dir.is_dir():
+            for f in log_dir.glob("*.log"):
+                if f.is_file():
+                    try:
+                        f.unlink()
+                    except Exception:
+                        pass
+    except Exception:
+        pass
+
+    yield
+
+
 app = FastAPI(
     title=settings.APP_NAME,
     version="0.1.0",
     description="Production-grade API and static asset host for DarGlobal & Wasalt Real Estate AI Chatbot.",
+    lifespan=lifespan,
 )
 
 # CORS configuration for development and multi-host access

@@ -25,7 +25,7 @@ from .tools import (
 
 agent = Agent(
     name="property_database_agent",
-    model=os.getenv("ADK_MODEL_NAME", "gemini-2.5-flash"),
+    model=os.getenv("ADK_MODEL_NAME", "gemini-3.5-flash-lite"),
     description=(
         "Specialist in real estate listings, exact pricing, REGA/FAL licenses, "
         "developer masterplans, Infath auctions, and individual property card inspection. "

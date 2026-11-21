@@ -18,7 +18,7 @@ from .tools import read_document, search_knowledge_base
 
 agent = Agent(
     name="company_knowledge_agent",
-    model=os.getenv("ADK_MODEL_NAME", "gemini-2.5-flash"),
+    model=os.getenv("ADK_MODEL_NAME", "gemini-3.5-flash-lite"),
     description=(
         "Specialist in DarGlobal and Wasalt corporate background, brand partnerships "
         "(Trump, Pagani, Aston Martin, Elie Saab, Missoni), real estate tokenization, "
