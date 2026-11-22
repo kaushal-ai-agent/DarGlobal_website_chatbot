@@ -15,14 +15,14 @@ A production-grade, multi-agent real estate intelligence system designed to cons
 ---
 
 ## Demo
-
+https://github.com/user-attachments/assets/e15bd6e8-aad5-46f0-a1ca-b92844a14621
 <!--
   DEMO VIDEO INTEGRATION GUIDE:
   Option A (Recommended for GitHub): Drag-and-drop 'data/video/demo.mp4' directly into the GitHub web editor 
            when editing this README on GitHub. GitHub will upload it to its asset CDN and generate an inline 
            video player tag: https://github.com/user-attachments/assets/<asset-id>
 
-https://github.com/user-attachments/assets/e15bd6e8-aad5-46f0-a1ca-b92844a14621
+(https://github.com/user-attachments/assets/e15bd6e8-aad5-46f0-a1ca-b92844a14621)
 
 
   Option B (Local/Repo-hosted): Place your recorded screencast as an animated GIF at 'data/video/demo.gif' 
