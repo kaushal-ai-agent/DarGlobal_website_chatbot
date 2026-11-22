@@ -31,7 +31,7 @@ A production-grade, multi-agent real estate intelligence system designed to cons
 
 | Real-Time Execution Timeline & Multi-Agent Handoffs |
 | :-------------------------------------------------: |
-| ![DarGlobal & Wasalt Chatbot Demo]([./data/video/demo.gif]()) https://github.com/user-attachments/assets/e15bd6e8-aad5-46f0-a1ca-b92844a14621|
+|  https://github.com/user-attachments/assets/e15bd6e8-aad5-46f0-a1ca-b92844a14621|
 | *Recorded interaction displaying live ADK thinking tokens, sub-agent handoffs, and hybrid RAG tool execution.* |
 | *Direct Video File:* [Download / View data/video/demo.mp4](./data/video/demo.mp4) |
 
